@@ -5,7 +5,7 @@
 
 char xTurn = 1;
 char place = '0';
-char winner = '0'; //0=still playing, N=no one won, X=x won, O=owon
+char winner = '0'; //0=still playing, N=no one won, X=x won, O=o won
 char turn = 1;
 char color = 0; 
 char board[9] = {"123456789"};
@@ -18,8 +18,6 @@ void checkWinner();
 
 int main (int argc, char **argv){
 
-    system("Clear");
-    
     if(argc == 2){
         if(strcpy(argv[1], "-C") || strcpy(argv[1], "-c")){
             color = 1;
