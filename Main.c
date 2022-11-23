@@ -1,10 +1,3 @@
-/*
-  Tic Tac Toe.c
-
-  Created by Loïc L'hostis on 29/05/2022.
-  Added colored output the same eavening.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,22 +26,16 @@ int main (int argc, char **argv){
         }
     }
     
-    
-    for (int i = 0; i < 9; i++){
-
+    while(1){
     printBoard();
     askPlace();
     checkWinner();
-    if(end()){
-        break;
-        }
-
+    if(end()){break;}
     }
 
     turn--;
     printBoard();
     printf("*******************************************************************************\n");
-
 
     return 0;
 }
@@ -57,7 +44,7 @@ void printBoard(){
 
     system("clear");
 
-    printf("**********************************Tic Tac Toe**********************************\n\n");
+    printf("**********************************Tic Tac Toe**********************************\n");
     printf("Turn # %d \n\n", turn);
 
     if(color == 0){
